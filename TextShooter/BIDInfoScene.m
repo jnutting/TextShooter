@@ -126,7 +126,7 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     if (touchIsInNode(touch, _bookLogo)) {
-        NSURL *url = [NSURL URLWithString:@"http://www.amazon.com/Beginning-iOS-Development-Exploring-SDK/dp/143026022X&tag=rebisoft-20"];
+        NSURL *url = [NSURL URLWithString:@"http://amzn.to/1eTEDIA"];
         [[UIApplication sharedApplication] openURL:url];
     } else {
         SKTransition *transition = [SKTransition revealWithDirection:SKTransitionDirectionUp duration:0.5];
