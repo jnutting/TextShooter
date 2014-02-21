@@ -12,6 +12,7 @@
 #import "BIDInfoScene.h"
 #import "BIDGeometry.h"
 #import <StoreKit/StoreKit.h>
+#import "RBSGameCenterManager.h"
 
 static int rebisoftId = 301618973;
 
@@ -23,6 +24,7 @@ static SKAction *gameStartSound;
 @property (strong, nonatomic) SKLabelNode *helpButton;
 @property (strong, nonatomic) SKLabelNode *moreButton;
 @property (strong, nonatomic) SKLabelNode *infoButton;
+@property (strong, nonatomic) SKLabelNode *gameCenterButton;
 @property (strong, nonatomic) UIAlertView *waitingForAppStoreAlertView;
 
 @end
@@ -36,6 +38,8 @@ static SKAction *gameStartSound;
 
 - (instancetype)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
+        _gameCenterButtonEnabled = NO;
+        
         self.backgroundColor = [SKColor greenColor];
         
         SKLabelNode *topLabel = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
@@ -64,6 +68,16 @@ static SKAction *gameStartSound;
         logo.anchorPoint = CGPointMake(0.5, 1);
         [self addChild:logo];
         
+        _gameCenterButton = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
+        _gameCenterButton.text = @"Game Center Leaderboards";
+        _gameCenterButton.fontColor = [SKColor blackColor];
+        _gameCenterButton.fontSize = 16;
+        _gameCenterButton.verticalAlignmentMode = SKLabelVerticalAlignmentModeTop;
+        _gameCenterButton.position = CGPointMake(self.frame.size.width * 0.5,
+                                            self.frame.size.height - 4);
+        [self addChild:_gameCenterButton];
+        _gameCenterButton.hidden = YES;
+
         _startButton = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
         _startButton.text = @"Touch to start";
         _startButton.fontColor = [SKColor blackColor];
@@ -106,6 +120,10 @@ static SKAction *gameStartSound;
     return self;
 }
 
+- (void)setGameCenterButtonEnabled:(BOOL)gameCenterButtonEnabled {
+    _gameCenterButton.hidden = !gameCenterButtonEnabled;
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     if (touchIsInNode(touch, _startButton)) {
@@ -124,6 +142,10 @@ static SKAction *gameStartSound;
         SKTransition *transition = [SKTransition flipVerticalWithDuration:0.5];
         SKScene *game = [[BIDInfoScene alloc] initWithSize:self.frame.size];
         [self.view presentScene:game transition:transition];
+    } else if (!_gameCenterButton.hidden && touchIsInNode(touch, _gameCenterButton)) {
+        [[RBSGameCenterManager shared] showGameCenterWithInitialViewState:GKGameCenterViewControllerStateLeaderboards
+                                                    leaderboardIdentifier:nil
+                                                        completionHandler:nil];
     }
 }
 

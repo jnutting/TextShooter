@@ -10,4 +10,6 @@
 
 @interface BIDStartScene : SKScene
 
+@property (assign, nonatomic) BOOL gameCenterButtonEnabled;
+
 @end
