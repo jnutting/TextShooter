@@ -93,7 +93,7 @@ static SKAction *gameStartSound;
         _tutorialButton = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
         _tutorialButton.text = @"Tutorial";
         _tutorialButton.fontColor = [SKColor blackColor];
-        _tutorialButton.fontSize = 36;
+        _tutorialButton.fontSize = 30;
         _tutorialButton.position = CGPointMake(_startButton.position.x,
                                                _startButton.position.y - 60);
         [self addChild:_tutorialButton];
@@ -180,8 +180,6 @@ static SKAction *gameStartSound;
 }
 
 - (void)showMultiProductStore {
-    self.paused = YES;
-    
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"OtherRebisoftGames" withExtension:@"json"];
     NSError *error;
     NSData *jsonData = [NSData dataWithContentsOfURL:url];
