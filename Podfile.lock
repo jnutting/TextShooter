@@ -1,0 +1,10 @@
+PODS:
+  - MultiProductViewer (0.0.2)
+
+DEPENDENCIES:
+  - MultiProductViewer
+
+SPEC CHECKSUMS:
+  MultiProductViewer: bb43c56a73b248f3db3ab6515eb5c9da902fe184
+
+COCOAPODS: 0.29.0
