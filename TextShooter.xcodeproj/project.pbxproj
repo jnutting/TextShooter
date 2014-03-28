@@ -34,6 +34,7 @@
 		049637B718E3322E00779C58 /* BIDLevelOneScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 049637B618E3322E00779C58 /* BIDLevelOneScene.m */; };
 		049637BA18E3323B00779C58 /* BIDLevelTwoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 049637B918E3323B00779C58 /* BIDLevelTwoScene.m */; };
 		049637BD18E3324700779C58 /* BIDLevelThreeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 049637BC18E3324700779C58 /* BIDLevelThreeScene.m */; };
+		049637BF18E5846C00779C58 /* OtherRebisoftGames.json in Resources */ = {isa = PBXBuildFile; fileRef = 049637BE18E5846C00779C58 /* OtherRebisoftGames.json */; };
 		04CE475918B792F5008D4BA5 /* RBSGameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CE475818B792F5008D4BA5 /* RBSGameCenterManager.m */; };
 		04FB0EBA1890318000FC08B1 /* SKNode+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB0EB91890318000FC08B1 /* SKNode+Extra.m */; };
 		04FB0EBD18911C4100FC08B1 /* MissileExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 04FB0EBB18911C4100FC08B1 /* MissileExplosion.sks */; };
@@ -103,6 +104,7 @@
 		049637B918E3323B00779C58 /* BIDLevelTwoScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDLevelTwoScene.m; sourceTree = "<group>"; };
 		049637BB18E3324700779C58 /* BIDLevelThreeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDLevelThreeScene.h; sourceTree = "<group>"; };
 		049637BC18E3324700779C58 /* BIDLevelThreeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDLevelThreeScene.m; sourceTree = "<group>"; };
+		049637BE18E5846C00779C58 /* OtherRebisoftGames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OtherRebisoftGames.json; sourceTree = "<group>"; };
 		04CE475718B792F5008D4BA5 /* RBSGameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBSGameCenterManager.h; sourceTree = "<group>"; };
 		04CE475818B792F5008D4BA5 /* RBSGameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBSGameCenterManager.m; sourceTree = "<group>"; };
 		04FB0EB81890318000FC08B1 /* SKNode+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "SKNode+Extra.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -226,6 +228,7 @@
 				046C2E9E185FB9400071B5B0 /* BIDGeometry.h */,
 				04CE475718B792F5008D4BA5 /* RBSGameCenterManager.h */,
 				04CE475818B792F5008D4BA5 /* RBSGameCenterManager.m */,
+				049637BE18E5846C00779C58 /* OtherRebisoftGames.json */,
 				04112E8518522D8F00202701 /* Images.xcassets */,
 				04112E6F18522D8F00202701 /* Supporting Files */,
 				04FB0EB81890318000FC08B1 /* SKNode+Extra.h */,
@@ -351,6 +354,7 @@
 				04FB0EBD18911C4100FC08B1 /* MissileExplosion.sks in Resources */,
 				04FB0ECC1891305F00FC08B1 /* enemyHit.wav in Resources */,
 				04112E8618522D8F00202701 /* Images.xcassets in Resources */,
+				049637BF18E5846C00779C58 /* OtherRebisoftGames.json in Resources */,
 				046AB15518AB71BE006357EA /* levelComplete.wav in Resources */,
 				04FB0EC018911FC900FC08B1 /* EnemyExplosion.sks in Resources */,
 				04FB0ECD1891305F00FC08B1 /* gameOver.wav in Resources */,

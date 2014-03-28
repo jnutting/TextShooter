@@ -14,6 +14,8 @@
 #import <StoreKit/StoreKit.h>
 #import "RBSGameCenterManager.h"
 #import "SKNode+Extra.h"
+#import <MultiProductViewer/TBTMultiProductViewController.h>
+#import <MultiProductViewer/TBTProductCluster.h>
 
 static int rebisoftId = 301618973;
 
@@ -153,8 +155,8 @@ static SKAction *gameStartSound;
         
         [self runAction:gameStartSound];
     } else if (touchIsInNode(touch, _moreButton)) {
-        [self animateButton:_startButton then:^{
-            [self showMoreRebisoft:nil];
+        [self animateButton:_moreButton then:^{
+            [self showMultiProductStore];
         }];
     } else if (touchIsInNode(touch, _helpButton)) {
         SKTransition *transition = [SKTransition flipHorizontalWithDuration:0.5];
@@ -177,43 +179,22 @@ static SKAction *gameStartSound;
     }
 }
 
-- (IBAction)showMoreRebisoft:(UIControl *)sender {
-    [self showStoreForIdentifier:@(rebisoftId)];
-}
-
-- (void)showStoreForIdentifier:(NSNumber *)identifier {
-    SKStoreProductViewController *vc = [[SKStoreProductViewController alloc] init];
-    vc.delegate = self;
+- (void)showMultiProductStore {
+    self.paused = YES;
     
-    NSDictionary *params = @{SKStoreProductParameterITunesItemIdentifier : identifier};
-    self.waitingForAppStoreAlertView = [[UIAlertView alloc] initWithTitle:@"Connecting..." message:@"Please wait while we talk to the App Store." delegate:self cancelButtonTitle:@"Forget it!" otherButtonTitles:nil];
-    [self.waitingForAppStoreAlertView show];
-    
-    [vc loadProductWithParameters:params completionBlock:^(BOOL result, NSError *error) {
-        if (!self.waitingForAppStoreAlertView) {
-            // user aborted
-//            NSLog(@"User aborted store session");
-            return;
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"OtherRebisoftGames" withExtension:@"json"];
+    NSError *error;
+    NSData *jsonData = [NSData dataWithContentsOfURL:url];
+    if (jsonData) {
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+        if (dict) {
+            NSArray *specs = dict[@"productSpecs"];
+            NSArray *productClusters = [TBTProductCluster productClustersFromSpecs:specs];
+            [TBTMultiProductViewController runWithTitle:@"Other Games"
+                                        productClusters:productClusters
+                                               delegate:nil];
         }
-        
-        // get rid of the waiting for app store alert
-        [self.waitingForAppStoreAlertView dismissWithClickedButtonIndex:0 animated:YES];
-        
-        if (result) {
-//            NSLog(@"we have a result! Time to show the store view controller");
-            [[[[[UIApplication sharedApplication] windows] firstObject] rootViewController]
-             presentViewController:vc animated:YES completion:nil];
-        } else {
-//            NSLog(@"error connection to store");
-            // The gui isn't going to display. Give the user some feedback.
-            [[[UIAlertView alloc] initWithTitle:@"No luck!" message:[error localizedDescription] delegate:self cancelButtonTitle:@"Dang!" otherButtonTitles:nil] show];
-        }
-    }];
-}
-
-- (void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController {
-    self.waitingForAppStoreAlertView = nil;
-    [viewController dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
