@@ -21,4 +21,18 @@
     // default implementation does nothing
 }
 
+- (void)animateButton:(SKNode *)button then:(void (^)(void))completion {
+    [self runAction:[SKAction sequence:@[
+                                         [SKAction runBlock:^{
+        [button runAction:[SKAction scaleTo:1.2 duration:0.1]];
+    }],
+                                         [SKAction waitForDuration:0.1],
+                                         [SKAction runBlock:^{
+        [button runAction:[SKAction scaleTo:1.0 duration:0.1]];
+    }],
+                                         [SKAction waitForDuration:0.1],
+                                         [SKAction runBlock:completion]
+                                         ]]];
+}
+
 @end

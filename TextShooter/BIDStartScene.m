@@ -13,6 +13,7 @@
 #import "BIDGeometry.h"
 #import <StoreKit/StoreKit.h>
 #import "RBSGameCenterManager.h"
+#import "SKNode+Extra.h"
 
 static int rebisoftId = 301618973;
 
@@ -133,49 +134,46 @@ static SKAction *gameStartSound;
     _gameCenterButton.hidden = !gameCenterButtonEnabled;
 }
 
-- (void)presentScene:(SKScene *)scene transition:(SKTransition *)transition activatingButton:(SKNode *)button {
-    [self runAction:[SKAction sequence:@[
-                                         [SKAction runBlock:^{
-        [button runAction:[SKAction scaleTo:1.2 duration:0.1]];
-    }],
-                                         [SKAction waitForDuration:0.1],
-                                         [SKAction runBlock:^{
-        [button runAction:[SKAction scaleTo:1.0 duration:0.1]];
-    }],
-                                         [SKAction waitForDuration:0.1],
-                                         [SKAction runBlock:^{
-        [self.view presentScene:scene transition:transition];
-    }]
-                                         ]]];
-}
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     if (touchIsInNode(touch, _startButton)) {
         SKTransition *transition = [SKTransition doorwayWithDuration:1.0];
         SKScene *game = [BIDLevelScene sceneWithSize:self.frame.size levelNumber:1 score:0 mode:BIDGameModeNormal];
-        [self presentScene:game transition:transition activatingButton:_startButton];
+        [self animateButton:_startButton then:^{
+            [self.view presentScene:game transition:transition];
+        }];
         
         [self runAction:gameStartSound];
     } else if (touchIsInNode(touch, _tutorialButton)) {
         SKTransition *transition = [SKTransition doorwayWithDuration:1.0];
         SKScene *game = [BIDLevelScene sceneWithSize:self.frame.size levelNumber:1 score:0 mode:BIDGameModeTutorial];
-        [self presentScene:game transition:transition activatingButton:_tutorialButton];
+        [self animateButton:_tutorialButton then:^{
+            [self.view presentScene:game transition:transition];
+        }];
         
         [self runAction:gameStartSound];
     } else if (touchIsInNode(touch, _moreButton)) {
-        [self showMoreRebisoft:nil];
+        [self animateButton:_startButton then:^{
+            [self showMoreRebisoft:nil];
+        }];
     } else if (touchIsInNode(touch, _helpButton)) {
         SKTransition *transition = [SKTransition flipHorizontalWithDuration:0.5];
         SKScene *game = [[BIDHelpScene alloc] initWithSize:self.frame.size];
-        [self presentScene:game transition:transition activatingButton:_helpButton];
+        [self animateButton:_helpButton then:^{
+            [self.view presentScene:game transition:transition];
+        }];
     } else if (touchIsInNode(touch, _infoButton)) {
         SKTransition *transition = [SKTransition flipVerticalWithDuration:0.5];
         SKScene *game = [[BIDInfoScene alloc] initWithSize:self.frame.size];
-        [self presentScene:game transition:transition activatingButton:_infoButton];
+        [self animateButton:_infoButton then:^{
+            [self.view presentScene:game transition:transition];
+        }];
     } else if (!_gameCenterButton.hidden && touchIsInNode(touch, _gameCenterButton)) {
-        [[RBSGameCenterManager shared] showGameCenterWithInitialViewState:GKGameCenterViewControllerStateLeaderboards
-                                                    leaderboardIdentifier:nil
-                                                        completionHandler:nil];
+        [self animateButton:_gameCenterButton then:^{
+            [[RBSGameCenterManager shared] showGameCenterWithInitialViewState:GKGameCenterViewControllerStateLeaderboards
+                                                        leaderboardIdentifier:nil
+                                                            completionHandler:nil];
+        }];
     }
 }
 
