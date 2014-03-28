@@ -10,9 +10,10 @@
 
 @implementation SKNode (Extra)
 
-- (void)receiveAttacker:(SKNode *)attacker contact:(SKPhysicsContact *)contact;
+- (NSInteger)receiveAttacker:(SKNode *)attacker contact:(SKPhysicsContact *)contact;
 {
     // default implementation does nothing
+    return 0;
 }
 
 - (void)friendlyBumpFrom:(SKNode *)node

@@ -23,7 +23,7 @@
         [self addChild:topLabel];
         
         SKLabelNode *text1 = [SKLabelNode labelNodeWithFontNamed:@"Courier-Oblique"];
-        text1.text = @"- Tap upper screen to shoot";
+        text1.text = @"- Tap enemies to shoot";
         text1.fontColor = [SKColor blackColor];
         text1.fontSize = 17;
         text1.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;

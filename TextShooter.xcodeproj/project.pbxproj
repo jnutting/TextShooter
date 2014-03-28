@@ -30,6 +30,10 @@
 		04638BAE18591FA6004CFD7C /* BIDPlayerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 04638BAD18591FA6004CFD7C /* BIDPlayerNode.m */; };
 		046AB15518AB71BE006357EA /* levelComplete.wav in Resources */ = {isa = PBXBuildFile; fileRef = 046AB15418AB71BE006357EA /* levelComplete.wav */; };
 		046AB15818AB7310006357EA /* BIDInfoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 046AB15718AB7310006357EA /* BIDInfoScene.m */; };
+		049637B418E3315B00779C58 /* BIDLevelSceneFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 049637B318E3315B00779C58 /* BIDLevelSceneFactory.m */; };
+		049637B718E3322E00779C58 /* BIDLevelOneScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 049637B618E3322E00779C58 /* BIDLevelOneScene.m */; };
+		049637BA18E3323B00779C58 /* BIDLevelTwoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 049637B918E3323B00779C58 /* BIDLevelTwoScene.m */; };
+		049637BD18E3324700779C58 /* BIDLevelThreeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 049637BC18E3324700779C58 /* BIDLevelThreeScene.m */; };
 		04CE475918B792F5008D4BA5 /* RBSGameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CE475818B792F5008D4BA5 /* RBSGameCenterManager.m */; };
 		04FB0EBA1890318000FC08B1 /* SKNode+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB0EB91890318000FC08B1 /* SKNode+Extra.m */; };
 		04FB0EBD18911C4100FC08B1 /* MissileExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 04FB0EBB18911C4100FC08B1 /* MissileExplosion.sks */; };
@@ -55,7 +59,7 @@
 
 /* Begin PBXFileReference section */
 		0404D36418884659008F12E0 /* BIDEnemyNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDEnemyNode.h; sourceTree = "<group>"; };
-		0404D36518884659008F12E0 /* BIDEnemyNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDEnemyNode.m; sourceTree = "<group>"; };
+		0404D36518884659008F12E0 /* BIDEnemyNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BIDEnemyNode.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0404D367188924C5008F12E0 /* BIDPhysicsCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDPhysicsCategories.h; sourceTree = "<group>"; };
 		0404D368188995F6008F12E0 /* BIDBulletNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDBulletNode.h; sourceTree = "<group>"; };
 		0404D369188995F6008F12E0 /* BIDBulletNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDBulletNode.m; sourceTree = "<group>"; };
@@ -85,15 +89,23 @@
 		043F26B618A159E10005B321 /* BIDHelpScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDHelpScene.h; sourceTree = "<group>"; };
 		043F26B718A159E10005B321 /* BIDHelpScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDHelpScene.m; sourceTree = "<group>"; };
 		04638BAC18591FA6004CFD7C /* BIDPlayerNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDPlayerNode.h; sourceTree = "<group>"; };
-		04638BAD18591FA6004CFD7C /* BIDPlayerNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDPlayerNode.m; sourceTree = "<group>"; };
+		04638BAD18591FA6004CFD7C /* BIDPlayerNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BIDPlayerNode.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		046AB15418AB71BE006357EA /* levelComplete.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = levelComplete.wav; sourceTree = "<group>"; };
 		046AB15618AB7310006357EA /* BIDInfoScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDInfoScene.h; sourceTree = "<group>"; };
 		046AB15718AB7310006357EA /* BIDInfoScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDInfoScene.m; sourceTree = "<group>"; };
 		046C2E9E185FB9400071B5B0 /* BIDGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDGeometry.h; sourceTree = "<group>"; };
+		049637B218E3315B00779C58 /* BIDLevelSceneFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDLevelSceneFactory.h; sourceTree = "<group>"; };
+		049637B318E3315B00779C58 /* BIDLevelSceneFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDLevelSceneFactory.m; sourceTree = "<group>"; };
+		049637B518E3322E00779C58 /* BIDLevelOneScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDLevelOneScene.h; sourceTree = "<group>"; };
+		049637B618E3322E00779C58 /* BIDLevelOneScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDLevelOneScene.m; sourceTree = "<group>"; };
+		049637B818E3323B00779C58 /* BIDLevelTwoScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDLevelTwoScene.h; sourceTree = "<group>"; };
+		049637B918E3323B00779C58 /* BIDLevelTwoScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDLevelTwoScene.m; sourceTree = "<group>"; };
+		049637BB18E3324700779C58 /* BIDLevelThreeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDLevelThreeScene.h; sourceTree = "<group>"; };
+		049637BC18E3324700779C58 /* BIDLevelThreeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDLevelThreeScene.m; sourceTree = "<group>"; };
 		04CE475718B792F5008D4BA5 /* RBSGameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBSGameCenterManager.h; sourceTree = "<group>"; };
 		04CE475818B792F5008D4BA5 /* RBSGameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBSGameCenterManager.m; sourceTree = "<group>"; };
-		04FB0EB81890318000FC08B1 /* SKNode+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKNode+Extra.h"; sourceTree = "<group>"; };
-		04FB0EB91890318000FC08B1 /* SKNode+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKNode+Extra.m"; sourceTree = "<group>"; };
+		04FB0EB81890318000FC08B1 /* SKNode+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "SKNode+Extra.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		04FB0EB91890318000FC08B1 /* SKNode+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "SKNode+Extra.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		04FB0EBB18911C4100FC08B1 /* MissileExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MissileExplosion.sks; sourceTree = "<group>"; };
 		04FB0EBC18911C4100FC08B1 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		04FB0EBF18911FC900FC08B1 /* EnemyExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EnemyExplosion.sks; sourceTree = "<group>"; };
@@ -180,8 +192,16 @@
 				04112E7A18522D8F00202701 /* Main.storyboard */,
 				04112E7D18522D8F00202701 /* BIDViewController.h */,
 				04112E7E18522D8F00202701 /* BIDViewController.m */,
+				049637B218E3315B00779C58 /* BIDLevelSceneFactory.h */,
+				049637B318E3315B00779C58 /* BIDLevelSceneFactory.m */,
 				04112E8018522D8F00202701 /* BIDLevelScene.h */,
 				04112E8118522D8F00202701 /* BIDLevelScene.m */,
+				049637B518E3322E00779C58 /* BIDLevelOneScene.h */,
+				049637B618E3322E00779C58 /* BIDLevelOneScene.m */,
+				049637B818E3323B00779C58 /* BIDLevelTwoScene.h */,
+				049637B918E3323B00779C58 /* BIDLevelTwoScene.m */,
+				049637BB18E3324700779C58 /* BIDLevelThreeScene.h */,
+				049637BC18E3324700779C58 /* BIDLevelThreeScene.m */,
 				04FB0EC41891294000FC08B1 /* BIDStartScene.h */,
 				04FB0EC51891294000FC08B1 /* BIDStartScene.m */,
 				043F26B618A159E10005B321 /* BIDHelpScene.h */,
@@ -282,7 +302,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = BID;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Apress;
 				TargetAttributes = {
 					04112E6218522D8F00202701 = {
@@ -349,16 +369,20 @@
 			files = (
 				04FB0EC31891251200FC08B1 /* BIDGameOverScene.m in Sources */,
 				04FB0EBA1890318000FC08B1 /* SKNode+Extra.m in Sources */,
+				049637B418E3315B00779C58 /* BIDLevelSceneFactory.m in Sources */,
 				04112E7918522D8F00202701 /* BIDAppDelegate.m in Sources */,
 				04FB0EC61891294000FC08B1 /* BIDStartScene.m in Sources */,
 				04112E7F18522D8F00202701 /* BIDViewController.m in Sources */,
 				0404D36A188995F6008F12E0 /* BIDBulletNode.m in Sources */,
 				04112E8218522D8F00202701 /* BIDLevelScene.m in Sources */,
+				049637BD18E3324700779C58 /* BIDLevelThreeScene.m in Sources */,
 				04112E7518522D8F00202701 /* main.m in Sources */,
 				043F26B818A159E10005B321 /* BIDHelpScene.m in Sources */,
 				0404D36618884659008F12E0 /* BIDEnemyNode.m in Sources */,
 				046AB15818AB7310006357EA /* BIDInfoScene.m in Sources */,
+				049637BA18E3323B00779C58 /* BIDLevelTwoScene.m in Sources */,
 				04CE475918B792F5008D4BA5 /* RBSGameCenterManager.m in Sources */,
+				049637B718E3322E00779C58 /* BIDLevelOneScene.m in Sources */,
 				04638BAE18591FA6004CFD7C /* BIDPlayerNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,7 +445,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -461,7 +484,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -496,7 +518,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jack Nutting (S8WC5WDKYN)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextShooter/TextShooter-Prefix.pch";
 				INFOPLIST_FILE = "TextShooter/TextShooter-Info.plist";
@@ -523,7 +545,6 @@
 		04112EA018522D8F00202701 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TextShooter.app/TextShooter";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -546,7 +567,6 @@
 		04112EA118522D8F00202701 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TextShooter.app/TextShooter";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

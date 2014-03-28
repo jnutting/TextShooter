@@ -14,16 +14,27 @@
 #import "BIDGameOverScene.h"
 #import "BIDStartScene.h"
 #import "BIDGeometry.h"
+#import "BIDLevelSceneFactory.h"
 
 #define ARC4RANDOM_MAX      0x100000000
+
+#define BULLET_FIRE_POINT -1
+#define PUSH_ENEMY_OFF_TOP_POINTS 100
+#define PUSH_ENEMY_OFF_SIDE_POINTS 20
+
+#define PLAYER_AREA_HEIGHT 44
+
+@class BIDLevelOneScene;
+@class BIDLevelTwoScene;
+@class BIDLevelThreeScene;
 
 @interface BIDLevelScene () <SKPhysicsContactDelegate>
 
 @property (strong, nonatomic) BIDPlayerNode *playerNode;
-@property (strong, nonatomic) SKNode *enemies;
 @property (strong, nonatomic) SKNode *playerBullets;
 @property (assign, nonatomic) BOOL isPaused;
 @property (strong, nonatomic) SKLabelNode *toMenu;
+@property (strong, nonatomic) SKAction *pulsate;
 
 @end
 
@@ -39,34 +50,41 @@ static SKAction *levelCompleteSound;
                                     waitForCompletion:NO];
 }
 
-+ (instancetype)sceneWithSize:(CGSize)size levelNumber:(NSUInteger)levelNumber
++ (instancetype)sceneWithSize:(CGSize)size levelNumber:(NSUInteger)levelNumber score:(NSUInteger)score mode:(BIDGameMode)gameMode
 {
-    return [[self alloc] initWithSize:size levelNumber:levelNumber];
+    Class klass = [BIDLevelSceneFactory sceneClassForLevelNumber:levelNumber mode:gameMode];
+    return [[klass alloc] initWithSize:size levelNumber:levelNumber score:(NSUInteger)score mode:gameMode];
 }
 
 - (instancetype)initWithSize:(CGSize)size
 {
-    return [self initWithSize:size levelNumber:1];
+    return [self initWithSize:size levelNumber:1 score:0 mode:BIDGameModeNormal];
 }
 
-- (instancetype)initWithSize:(CGSize)size levelNumber:(NSUInteger)levelNumber {
+- (instancetype)initWithSize:(CGSize)size levelNumber:(NSUInteger)levelNumber score:(NSUInteger)score mode:(BIDGameMode)gameMode {
     if (self = [super initWithSize:size]) {
+        
+        _mode = gameMode;
+        _pulsate = [SKAction sequence:@[[SKAction scaleXTo:1.2 y:1.2 duration:0.02],
+                                        [SKAction scaleXTo:1.0 y:1.0 duration:0.06]]];
+        
+        _score = score;
         _levelNumber = levelNumber;
         _playerLives = 5;
         _isPaused = NO;
 
         SKShapeNode *lowerBackdrop = [SKShapeNode node];
-        CGRect lowerBackdropRect = CGRectMake(CGRectGetMinX(self.frame), CGRectGetMinY(self.frame), CGRectGetWidth(self.frame), CGRectGetHeight(self.frame) * 0.2);
+        CGRect lowerBackdropRect = CGRectMake(CGRectGetMinX(self.frame), CGRectGetMinY(self.frame), CGRectGetWidth(self.frame), PLAYER_AREA_HEIGHT);
         UIBezierPath *lowerBackdropPath = [UIBezierPath bezierPathWithRect:lowerBackdropRect];
         lowerBackdrop.path = lowerBackdropPath.CGPath;
-        lowerBackdrop.fillColor = [UIColor colorWithWhite:0.97 alpha:1.0];
+        lowerBackdrop.fillColor = [UIColor colorWithWhite:0.9 alpha:1.0];
         lowerBackdrop.strokeColor = [UIColor blackColor];
         lowerBackdrop.lineWidth = 0;
         [self addChild:lowerBackdrop];
         
         _playerNode = [BIDPlayerNode node];
         _playerNode.position = CGPointMake(CGRectGetMidX(self.frame),
-                                           CGRectGetHeight(self.frame) * 0.1);
+                                           CGRectGetMinX(self.frame) + 30);
         
         [self addChild:_playerNode];
         _enemies = [SKNode node];
@@ -88,11 +106,11 @@ static SKAction *levelCompleteSound;
         backdrop.lineWidth = 0.5;
         [self addChild:backdrop];
         
-        SKLabelNode *lives = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
+        SKLabelNode *lives = [SKLabelNode labelNodeWithFontNamed:@"Courier-Oblique"];
         lives.fontSize = 16;
         lives.fontColor = [SKColor blackColor];
         lives.name = @"LivesLabel";
-        lives.text = [NSString stringWithFormat:@"Lives: %lu",
+        lives.text = [NSString stringWithFormat:@"%lu Lives",
                       (unsigned long)_playerLives];
         lives.verticalAlignmentMode = SKLabelVerticalAlignmentModeCenter;
         lives.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeRight;
@@ -100,11 +118,22 @@ static SKAction *levelCompleteSound;
                                      self.frame.size.height - 20);
         [self addChild:lives];
         
-        SKLabelNode *level = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
+        SKLabelNode *score = [SKLabelNode labelNodeWithFontNamed:@"Courier-Bold"];
+        score.fontSize = 24;
+        score.fontColor = [SKColor blackColor];
+        score.name = @"ScoreLabel";
+        score.text = [NSString stringWithFormat:@"%d", _score];
+        score.verticalAlignmentMode = SKLabelVerticalAlignmentModeCenter;
+        score.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
+        score.position = CGPointMake(CGRectGetMidX(self.frame),
+                                     self.frame.size.height - 20);
+        [self addChild:score];
+        
+        SKLabelNode *level = [SKLabelNode labelNodeWithFontNamed:@"Courier-Oblique"];
         level.fontSize = 16;
         level.fontColor = [SKColor blackColor];
         level.name = @"LevelLabel";
-        level.text = [NSString stringWithFormat:@"Level: %lu",
+        level.text = [NSString stringWithFormat:@"Level %lu",
                       (unsigned long)_levelNumber];
         level.verticalAlignmentMode = SKLabelVerticalAlignmentModeCenter;
         level.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
@@ -168,8 +197,38 @@ static SKAction *levelCompleteSound;
 - (void)setPlayerLives:(NSUInteger)playerLives {
     _playerLives = playerLives;
     SKLabelNode *lives = (id)[self childNodeWithName:@"LivesLabel"];
-    lives.text = [NSString stringWithFormat:@"Lives: %lu",
+    lives.text = [NSString stringWithFormat:@"%lu Lives",
                   (unsigned long)_playerLives];
+}
+
+- (void)setScore:(NSInteger)score {
+    SKLabelNode *scoreLabel = (id)[self childNodeWithName:@"ScoreLabel"];
+    if (score > _score) {
+        [self pulsate:scoreLabel];
+    }
+    _score = score;
+    scoreLabel.text = [NSString stringWithFormat:@"%d", _score];
+}
+
+- (void)pulsate:(SKNode *)node {
+    [node removeActionForKey:@"pulsate"];
+    [node runAction:self.pulsate withKey:@"pulsate"];
+}
+
+- (void)movePlayerToward:(CGPoint)location {
+    CGPoint target = CGPointMake(location.x,
+                                 self.playerNode.position.y);
+    [self.playerNode moveToward:target];
+}
+
+- (void)fireBulletToward:(CGPoint)location {
+    BIDBulletNode *bullet = [BIDBulletNode
+                             bulletFrom:self.playerNode.position
+                             toward:location];
+    if (bullet) {
+        [self.playerBullets addChild:bullet];
+        self.score += BULLET_FIRE_POINT;
+    }
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -192,17 +251,10 @@ static SKAction *levelCompleteSound;
             if (location.y > CGRectGetHeight(self.frame) - 40) {
                 // tap in pause area
                 [self togglePause];
-            } else if (location.y < CGRectGetHeight(self.frame) * 0.2 ) {
-                CGPoint target = CGPointMake(location.x,
-                                             self.playerNode.position.y);
-                [self.playerNode moveToward:target];
+            } else if (location.y < PLAYER_AREA_HEIGHT ) {
+                [self movePlayerToward:location];
             } else {
-                BIDBulletNode *bullet = [BIDBulletNode
-                                         bulletFrom:self.playerNode.position
-                                         toward:location];
-                if (bullet) {
-                    [self.playerBullets addChild:bullet];
-                }
+                [self fireBulletToward:location];
             }
 
         }
@@ -253,9 +305,18 @@ static SKAction *levelCompleteSound;
     NSMutableArray *enemiesToRemove = [NSMutableArray array];
     for (SKNode *node in self.enemies.children) {
         // Remove any enemies that have moved off-screen
-        if (!CGRectContainsPoint(self.frame, node.position)) {
+        if (!CGRectContainsPoint(CGRectInset(self.frame, -40, -40), node.position)) {
             // mark enemy for removal
             [enemiesToRemove addObject:node];
+            if (node.position.y > CGRectGetMaxY(self.frame)) {
+                NSLog(@"off top");
+                self.score += PUSH_ENEMY_OFF_TOP_POINTS;
+            } else if (node.position.x < CGRectGetMinX(self.frame) || node.position.x >CGRectGetMaxX(self.frame)) {
+                NSLog(@"off side");
+                self.score += PUSH_ENEMY_OFF_SIDE_POINTS;
+            } else {
+                NSLog(@"off bottom");
+            }
             continue;
         }
     }
@@ -285,7 +346,7 @@ static SKAction *levelCompleteSound;
     [_playerNode removeFromParent];
     
     SKTransition *transition = [SKTransition doorsOpenVerticalWithDuration:1.0];
-    BIDGameOverScene *gameOver = [[BIDGameOverScene alloc] initWithSize:self.frame.size deathLevel:self.levelNumber];
+    BIDGameOverScene *gameOver = [[BIDGameOverScene alloc] initWithSize:self.frame.size deathLevel:self.levelNumber mode:self.mode];
     [self.view presentScene:gameOver transition:transition];
     
     [self runAction:gameOverSound];
@@ -311,9 +372,11 @@ static SKAction *levelCompleteSound;
                                  self.frame.size.height * 0.5);
     [self addChild:label];
     
-    BIDLevelScene *nextLevel = [[BIDLevelScene alloc]
-                                initWithSize:self.frame.size
-                                levelNumber:self.levelNumber + 1];
+    BIDLevelScene *nextLevel = [BIDLevelScene
+                                sceneWithSize:self.frame.size
+                                levelNumber:self.levelNumber + 1
+                                score:self.score
+                                mode:self.mode];
     nextLevel.playerLives = self.playerLives;
     [self.view presentScene:nextLevel
                  transition:[SKTransition flipHorizontalWithDuration:1.0]];
@@ -347,7 +410,7 @@ static SKAction *levelCompleteSound;
         }
         // What do we do with the attacker and the attackee?
         if (attacker) {
-            [attackee receiveAttacker:attacker contact:contact];
+            self.score += [attackee receiveAttacker:attacker contact:contact];
             [self.playerBullets removeChildrenInArray:@[attacker]];
             [self.enemies removeChildrenInArray:@[attacker]];
         }

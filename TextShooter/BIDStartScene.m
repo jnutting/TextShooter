@@ -21,6 +21,7 @@ static SKAction *gameStartSound;
 @interface BIDStartScene () <SKStoreProductViewControllerDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) SKLabelNode *startButton;
+@property (strong, nonatomic) SKLabelNode *tutorialButton;
 @property (strong, nonatomic) SKLabelNode *helpButton;
 @property (strong, nonatomic) SKLabelNode *moreButton;
 @property (strong, nonatomic) SKLabelNode *infoButton;
@@ -79,12 +80,20 @@ static SKAction *gameStartSound;
         _gameCenterButton.hidden = YES;
 
         _startButton = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
-        _startButton.text = @"Touch to start";
+        _startButton.text = @"Play Game";
         _startButton.fontColor = [SKColor blackColor];
         _startButton.fontSize = 36;
         _startButton.position = CGPointMake(self.frame.size.width * 0.5,
                                            self.frame.size.height * 0.3);
         [self addChild:_startButton];
+        
+        _tutorialButton = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
+        _tutorialButton.text = @"Tutorial";
+        _tutorialButton.fontColor = [SKColor blackColor];
+        _tutorialButton.fontSize = 36;
+        _tutorialButton.position = CGPointMake(_startButton.position.x,
+                                               _startButton.position.y - 60);
+        [self addChild:_tutorialButton];
         
         _helpButton = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
         _helpButton.text = @"Help!";
@@ -124,12 +133,33 @@ static SKAction *gameStartSound;
     _gameCenterButton.hidden = !gameCenterButtonEnabled;
 }
 
+- (void)presentScene:(SKScene *)scene transition:(SKTransition *)transition activatingButton:(SKNode *)button {
+    [self runAction:[SKAction sequence:@[
+                                         [SKAction runBlock:^{
+        [button runAction:[SKAction scaleTo:1.2 duration:0.1]];
+    }],
+                                         [SKAction waitForDuration:0.1],
+                                         [SKAction runBlock:^{
+        [button runAction:[SKAction scaleTo:1.0 duration:0.1]];
+    }],
+                                         [SKAction waitForDuration:0.1],
+                                         [SKAction runBlock:^{
+        [self.view presentScene:scene transition:transition];
+    }]
+                                         ]]];
+}
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     if (touchIsInNode(touch, _startButton)) {
         SKTransition *transition = [SKTransition doorwayWithDuration:1.0];
-        SKScene *game = [[BIDLevelScene alloc] initWithSize:self.frame.size];
-        [self.view presentScene:game transition:transition];
+        SKScene *game = [BIDLevelScene sceneWithSize:self.frame.size levelNumber:1 score:0 mode:BIDGameModeNormal];
+        [self presentScene:game transition:transition activatingButton:_startButton];
+        
+        [self runAction:gameStartSound];
+    } else if (touchIsInNode(touch, _tutorialButton)) {
+        SKTransition *transition = [SKTransition doorwayWithDuration:1.0];
+        SKScene *game = [BIDLevelScene sceneWithSize:self.frame.size levelNumber:1 score:0 mode:BIDGameModeTutorial];
+        [self presentScene:game transition:transition activatingButton:_tutorialButton];
         
         [self runAction:gameStartSound];
     } else if (touchIsInNode(touch, _moreButton)) {
@@ -137,11 +167,11 @@ static SKAction *gameStartSound;
     } else if (touchIsInNode(touch, _helpButton)) {
         SKTransition *transition = [SKTransition flipHorizontalWithDuration:0.5];
         SKScene *game = [[BIDHelpScene alloc] initWithSize:self.frame.size];
-        [self.view presentScene:game transition:transition];
+        [self presentScene:game transition:transition activatingButton:_helpButton];
     } else if (touchIsInNode(touch, _infoButton)) {
         SKTransition *transition = [SKTransition flipVerticalWithDuration:0.5];
         SKScene *game = [[BIDInfoScene alloc] initWithSize:self.frame.size];
-        [self.view presentScene:game transition:transition];
+        [self presentScene:game transition:transition activatingButton:_infoButton];
     } else if (!_gameCenterButton.hidden && touchIsInNode(touch, _gameCenterButton)) {
         [[RBSGameCenterManager shared] showGameCenterWithInitialViewState:GKGameCenterViewControllerStateLeaderboards
                                                     leaderboardIdentifier:nil

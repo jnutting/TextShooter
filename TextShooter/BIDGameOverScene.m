@@ -11,11 +11,11 @@
 
 @implementation BIDGameOverScene
 
-- (instancetype)initWithSize:(CGSize)size deathLevel:(NSUInteger)deathLevel {
+- (instancetype)initWithSize:(CGSize)size deathLevel:(NSUInteger)deathLevel mode:(BIDGameMode)mode {
     if (self = [super initWithSize:size]) {
         self.backgroundColor = [SKColor purpleColor];
         SKLabelNode *text = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
-        text.text = @"Game Over";
+        text.text = (mode == BIDGameModeTutorial) ? @"All Done!" : @"Game Over";
         text.fontColor = [SKColor whiteColor];
         text.fontSize = 50;
         text.position = CGPointMake(self.frame.size.width * 0.5,
@@ -23,7 +23,9 @@
         [self addChild:text];
 
         SKLabelNode *text2 = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
-        text2.text = [NSString stringWithFormat:@"Died on level %d", deathLevel];
+        text2.text = (mode == BIDGameModeTutorial)
+        ? @"Touch to continue"
+        : [NSString stringWithFormat:@"Died on level %lu", (unsigned long)deathLevel];
         text2.fontColor = [SKColor whiteColor];
         text2.fontSize = 25;
         text2.position = CGPointMake(self.frame.size.width * 0.5,

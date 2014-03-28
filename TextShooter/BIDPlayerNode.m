@@ -82,7 +82,7 @@ static SKAction *playerHitSound;
     return duration;
 }
 
-- (void)receiveAttacker:(SKNode *)attacker contact:(SKPhysicsContact *)contact;
+- (NSInteger)receiveAttacker:(SKNode *)attacker contact:(SKPhysicsContact *)contact;
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"EnemyExplosion"
                                                      ofType:@"sks"];
@@ -92,6 +92,7 @@ static SKAction *playerHitSound;
     [self.scene addChild:explosion];
     
     [self runAction:playerHitSound];
+    return 0;
 }
 
 @end

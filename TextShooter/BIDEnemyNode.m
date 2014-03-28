@@ -10,6 +10,8 @@
 #import "BIDPhysicsCategories.h"
 #import "BIDGeometry.h"
 
+#define ENEMY_HIT_POINT_VALUE 10
+
 static SKAction *enemyHitSound;
 
 @implementation BIDEnemyNode
@@ -71,7 +73,7 @@ static SKAction *enemyHitSound;
     self.physicsBody.affectedByGravity = YES;
 }
 
-- (void)receiveAttacker:(SKNode *)attacker contact:(SKPhysicsContact *)contact
+- (NSInteger)receiveAttacker:(SKNode *)attacker contact:(SKPhysicsContact *)contact
 {
     self.physicsBody.affectedByGravity = YES;
     CGVector force = BIDVectorMultiply(attacker.physicsBody.velocity,
@@ -89,6 +91,7 @@ static SKAction *enemyHitSound;
     [self.scene addChild:explosion];
     
     [self runAction:enemyHitSound];
+    return ENEMY_HIT_POINT_VALUE;
 }
 
 @end

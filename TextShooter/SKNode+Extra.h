@@ -10,7 +10,7 @@
 
 @interface SKNode (Extra)
 
-- (void)receiveAttacker:(SKNode *)attacker contact:(SKPhysicsContact *)contact;
+- (NSInteger)receiveAttacker:(SKNode *)attacker contact:(SKPhysicsContact *)contact;
 - (void)friendlyBumpFrom:(SKNode *)node;
 
 @end

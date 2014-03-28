@@ -7,9 +7,10 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "BIDLevelScene.h"
 
 @interface BIDGameOverScene : SKScene
 
-- (instancetype)initWithSize:(CGSize)size deathLevel:(NSUInteger)deathLevel;
+- (instancetype)initWithSize:(CGSize)size deathLevel:(NSUInteger)deathLevel mode:(BIDGameMode)mode;
 
 @end
