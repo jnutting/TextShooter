@@ -157,22 +157,23 @@ static SKAction *levelCompleteSound;
         
         SKLabelNode *paused = [SKLabelNode labelNodeWithFontNamed:@"Courier-Oblique"];
         paused.fontSize = 48;
-        paused.fontColor = [SKColor darkGrayColor];
+        paused.fontColor = [SKColor redColor];
         paused.text = @"Paused";
         paused.verticalAlignmentMode = SKLabelVerticalAlignmentModeCenter;
         paused.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
         paused.position = CGPointMake(CGRectGetMidX(self.frame),
-                                      CGRectGetMidY(self.frame) + 150);
+                                      CGRectGetMidY(self.frame) + 140);
         [pausedNode addChild:paused];
 
         self.toMenu = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
+        _toMenu.name = @"quitButton";
         _toMenu.fontSize = 24;
         _toMenu.fontColor = [SKColor blackColor];
         _toMenu.text = @"Quit to Menu";
         _toMenu.verticalAlignmentMode = SKLabelVerticalAlignmentModeCenter;
         _toMenu.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
         _toMenu.position = CGPointMake(CGRectGetMidX(self.frame),
-                                      CGRectGetMidY(self.frame) - 150);
+                                      CGRectGetMidY(self.frame) - 145);
         [pausedNode addChild:_toMenu];
 
         SKLabelNode *resume = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
