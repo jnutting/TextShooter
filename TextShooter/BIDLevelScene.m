@@ -310,13 +310,13 @@ static SKAction *levelCompleteSound;
             // mark enemy for removal
             [enemiesToRemove addObject:node];
             if (node.position.y > CGRectGetMaxY(self.frame)) {
-                NSLog(@"off top");
+//                NSLog(@"off top");
                 self.score += PUSH_ENEMY_OFF_TOP_POINTS;
             } else if (node.position.x < CGRectGetMinX(self.frame) || node.position.x >CGRectGetMaxX(self.frame)) {
-                NSLog(@"off side");
+//                NSLog(@"off side");
                 self.score += PUSH_ENEMY_OFF_SIDE_POINTS;
             } else {
-                NSLog(@"off bottom");
+//                NSLog(@"off bottom");
             }
             continue;
         }

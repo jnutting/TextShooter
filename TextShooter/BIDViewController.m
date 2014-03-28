@@ -66,10 +66,10 @@
         SKView *skView = (SKView *)self.view;
         BIDStartScene *startScene = [skView.scene isKindOfClass:[BIDStartScene class]] ? (id)skView.scene : nil;
         if (success) {
-            NSLog(@"playerAuthenticated %@", [GKLocalPlayer localPlayer]);
+//            NSLog(@"playerAuthenticated %@", [GKLocalPlayer localPlayer]);
             startScene.gameCenterButtonEnabled = YES;
         } else {
-            NSLog(@"disableGameCenter");
+//            NSLog(@"disableGameCenter");
             startScene.gameCenterButtonEnabled = NO;
         }
     }];
