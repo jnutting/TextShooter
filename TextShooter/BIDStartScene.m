@@ -80,7 +80,7 @@ static SKAction *gameStartSound;
         _gameCenterButton.position = CGPointMake(self.frame.size.width * 0.5,
                                             self.frame.size.height - 4);
         [self addChild:_gameCenterButton];
-        _gameCenterButton.hidden = YES;
+        _gameCenterButton.hidden = ![GKLocalPlayer localPlayer].isAuthenticated;
 
         _startButton = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
         _startButton.text = @"Play Game";
