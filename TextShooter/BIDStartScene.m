@@ -17,8 +17,6 @@
 #import <MultiProductViewer/TBTMultiProductViewController.h>
 #import <MultiProductViewer/TBTProductCluster.h>
 
-static int rebisoftId = 301618973;
-
 static SKAction *gameStartSound;
 
 @interface BIDStartScene () <SKStoreProductViewControllerDelegate, UIAlertViewDelegate>

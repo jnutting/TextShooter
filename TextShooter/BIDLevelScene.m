@@ -123,7 +123,7 @@ static SKAction *levelCompleteSound;
         score.fontSize = 24;
         score.fontColor = [SKColor blackColor];
         score.name = @"ScoreLabel";
-        score.text = [NSString stringWithFormat:@"%d", _score];
+        score.text = [NSString stringWithFormat:@"%ld", (long)_score];
         score.verticalAlignmentMode = SKLabelVerticalAlignmentModeCenter;
         score.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
         score.position = CGPointMake(CGRectGetMidX(self.frame),
@@ -209,7 +209,7 @@ static SKAction *levelCompleteSound;
         [self pulsate:scoreLabel];
     }
     _score = score;
-    scoreLabel.text = [NSString stringWithFormat:@"%d", _score];
+    scoreLabel.text = [NSString stringWithFormat:@"%ld", (long)_score];
 }
 
 - (void)pulsate:(SKNode *)node {

@@ -15,7 +15,7 @@
 
 @implementation BIDLevelSceneFactory
 
-+ (Class)sceneClassForLevelNumber:(int)number mode:(BIDGameMode)mode {
++ (Class)sceneClassForLevelNumber:(NSUInteger)number mode:(BIDGameMode)mode {
     Class klass = nil;
     switch (mode) {
         case BIDGameModeNormal:
