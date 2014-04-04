@@ -15,6 +15,7 @@
 #import "BIDStartScene.h"
 #import "BIDGeometry.h"
 #import "BIDLevelSceneFactory.h"
+#import <GameKit/GameKit.h>
 
 #define ARC4RANDOM_MAX      0x100000000
 
@@ -351,6 +352,14 @@ static SKAction *levelCompleteSound;
     [self.view presentScene:gameOver transition:transition];
     
     [self runAction:gameOverSound];
+    if (self.mode != BIDGameModeTutorial) {
+        // save to Game Center
+        if ([GKLocalPlayer localPlayer].isAuthenticated) {
+            GKScore *gkScore = [[GKScore alloc] initWithLeaderboardIdentifier:@"LeaderboardID"];
+            gkScore.value = self.score;
+            [GKScore reportScores:@[gkScore] withCompletionHandler:nil];
+        }
+    }
 }
 
 - (void)checkForNextLevel
