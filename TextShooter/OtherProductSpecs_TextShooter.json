@@ -1,0 +1,31 @@
+{ "productSpecs" : [
+        {
+            "title" : "Free Games! No IAP, no ads",
+            "products" : [
+                    {
+                      "name" : "Pits of Death",
+                      "details" : "Trapped in a deadly maze, you must slay the Dragon or die trying. For iOS, Apple Watch, and Apple TV!",
+                      "identifier" : "989109750",
+                      "imageURLString" : "http://rebisoft.com/appicons/PitsOfDeathIcon128.png"
+                    },
+                    {
+                          "name" : "FlippyBit",
+                          "details" : "Party like it's 1979! Flippy Bit takes the great action of early 2014, and makes it look like it's on an old Atari.",
+                          "identifier" : "825459863",
+                          "imageURLString" : "http://rebisoft.com/appicons/flippybit512.png"
+                    },
+            ]
+        },
+        {
+            "title" : "Other free stuff",
+            "products" : [
+                    {
+                          "name" : "Goldy",
+                          "details" : "They say that goldfish have no memory, and Goldy is no exception! Goldy lets you use the internet in private.",
+                          "identifier" : "417317449",
+                          "imageURLString" : "http://rebisoft.com/appicons/Goldy512.png"
+                    },
+            ]
+        },
+    ]
+}

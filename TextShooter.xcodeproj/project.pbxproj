@@ -29,12 +29,11 @@
 		043F26B818A159E10005B321 /* BIDHelpScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 043F26B718A159E10005B321 /* BIDHelpScene.m */; };
 		04638BAE18591FA6004CFD7C /* BIDPlayerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 04638BAD18591FA6004CFD7C /* BIDPlayerNode.m */; };
 		046AB15518AB71BE006357EA /* levelComplete.wav in Resources */ = {isa = PBXBuildFile; fileRef = 046AB15418AB71BE006357EA /* levelComplete.wav */; };
-		046AB15818AB7310006357EA /* BIDInfoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 046AB15718AB7310006357EA /* BIDInfoScene.m */; };
 		049637B418E3315B00779C58 /* BIDLevelSceneFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 049637B318E3315B00779C58 /* BIDLevelSceneFactory.m */; };
 		049637B718E3322E00779C58 /* BIDLevelOneScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 049637B618E3322E00779C58 /* BIDLevelOneScene.m */; };
 		049637BA18E3323B00779C58 /* BIDLevelTwoScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 049637B918E3323B00779C58 /* BIDLevelTwoScene.m */; };
 		049637BD18E3324700779C58 /* BIDLevelThreeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 049637BC18E3324700779C58 /* BIDLevelThreeScene.m */; };
-		049637BF18E5846C00779C58 /* OtherRebisoftGames.json in Resources */ = {isa = PBXBuildFile; fileRef = 049637BE18E5846C00779C58 /* OtherRebisoftGames.json */; };
+		049637BF18E5846C00779C58 /* OtherProductSpecs_TextShooter.json in Resources */ = {isa = PBXBuildFile; fileRef = 049637BE18E5846C00779C58 /* OtherProductSpecs_TextShooter.json */; };
 		04CE475918B792F5008D4BA5 /* RBSGameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CE475818B792F5008D4BA5 /* RBSGameCenterManager.m */; };
 		04FB0EBA1890318000FC08B1 /* SKNode+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB0EB91890318000FC08B1 /* SKNode+Extra.m */; };
 		04FB0EBD18911C4100FC08B1 /* MissileExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 04FB0EBB18911C4100FC08B1 /* MissileExplosion.sks */; };
@@ -46,7 +45,8 @@
 		04FB0ECD1891305F00FC08B1 /* gameOver.wav in Resources */ = {isa = PBXBuildFile; fileRef = 04FB0EC81891305F00FC08B1 /* gameOver.wav */; };
 		04FB0ECE1891305F00FC08B1 /* gameStart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 04FB0EC91891305F00FC08B1 /* gameStart.wav */; };
 		04FB0ECF1891305F00FC08B1 /* playerHit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 04FB0ECA1891305F00FC08B1 /* playerHit.wav */; };
-		8615C2B1314443EA9882E870 /* libPods-TextShooter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 204C8BF5B0F245C3A5E676B0 /* libPods-TextShooter.a */; };
+		186BF2485ACE5CC82A88A6D0 /* libPods-TextShooterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 577E1B4C4946768D8F0AFF62 /* libPods-TextShooterTests.a */; };
+		F6B5084E30EB09B9FA2869FB /* libPods-TextShooter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FA798194BB47C48A016A2C /* libPods-TextShooter.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,7 +104,7 @@
 		049637B918E3323B00779C58 /* BIDLevelTwoScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDLevelTwoScene.m; sourceTree = "<group>"; };
 		049637BB18E3324700779C58 /* BIDLevelThreeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDLevelThreeScene.h; sourceTree = "<group>"; };
 		049637BC18E3324700779C58 /* BIDLevelThreeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDLevelThreeScene.m; sourceTree = "<group>"; };
-		049637BE18E5846C00779C58 /* OtherRebisoftGames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OtherRebisoftGames.json; sourceTree = "<group>"; };
+		049637BE18E5846C00779C58 /* OtherProductSpecs_TextShooter.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OtherProductSpecs_TextShooter.json; sourceTree = "<group>"; };
 		04CE475718B792F5008D4BA5 /* RBSGameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBSGameCenterManager.h; sourceTree = "<group>"; };
 		04CE475818B792F5008D4BA5 /* RBSGameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBSGameCenterManager.m; sourceTree = "<group>"; };
 		04FB0EB81890318000FC08B1 /* SKNode+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "SKNode+Extra.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -120,8 +120,12 @@
 		04FB0EC81891305F00FC08B1 /* gameOver.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameOver.wav; sourceTree = "<group>"; };
 		04FB0EC91891305F00FC08B1 /* gameStart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameStart.wav; sourceTree = "<group>"; };
 		04FB0ECA1891305F00FC08B1 /* playerHit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = playerHit.wav; sourceTree = "<group>"; };
-		204C8BF5B0F245C3A5E676B0 /* libPods-TextShooter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TextShooter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA5375F2A40D43978937E382 /* Pods-TextShooter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextShooter.xcconfig"; path = "Pods/Pods-TextShooter.xcconfig"; sourceTree = "<group>"; };
+		1191DE6D8B6C8382E2942E72 /* Pods-TextShooterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextShooterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextShooterTests/Pods-TextShooterTests.release.xcconfig"; sourceTree = "<group>"; };
+		41D22C1B6F6B70FF36FDA0E0 /* Pods-TextShooter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextShooter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextShooter/Pods-TextShooter.debug.xcconfig"; sourceTree = "<group>"; };
+		4993762B346EA3093FABF3E8 /* Pods-TextShooter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextShooter.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextShooter/Pods-TextShooter.release.xcconfig"; sourceTree = "<group>"; };
+		577E1B4C4946768D8F0AFF62 /* libPods-TextShooterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TextShooterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2944FDC61EFE91925B5A9E9 /* Pods-TextShooterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextShooterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextShooterTests/Pods-TextShooterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B4FA798194BB47C48A016A2C /* libPods-TextShooter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TextShooter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +137,7 @@
 				04112E6B18522D8F00202701 /* UIKit.framework in Frameworks */,
 				04112E6D18522D8F00202701 /* SpriteKit.framework in Frameworks */,
 				04112E6718522D8F00202701 /* Foundation.framework in Frameworks */,
-				8615C2B1314443EA9882E870 /* libPods-TextShooter.a in Frameworks */,
+				F6B5084E30EB09B9FA2869FB /* libPods-TextShooter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +148,7 @@
 				04112E8D18522D8F00202701 /* XCTest.framework in Frameworks */,
 				04112E8F18522D8F00202701 /* UIKit.framework in Frameworks */,
 				04112E8E18522D8F00202701 /* Foundation.framework in Frameworks */,
+				186BF2485ACE5CC82A88A6D0 /* libPods-TextShooterTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +165,7 @@
 				04112E9218522D8F00202701 /* TextShooterTests */,
 				04112E6518522D8F00202701 /* Frameworks */,
 				04112E6418522D8F00202701 /* Products */,
-				AA5375F2A40D43978937E382 /* Pods-TextShooter.xcconfig */,
+				DFC2AD13A9B6B0C5F6D4B2E9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,7 +186,8 @@
 				04112E6A18522D8F00202701 /* UIKit.framework */,
 				04112E6C18522D8F00202701 /* SpriteKit.framework */,
 				04112E8C18522D8F00202701 /* XCTest.framework */,
-				204C8BF5B0F245C3A5E676B0 /* libPods-TextShooter.a */,
+				B4FA798194BB47C48A016A2C /* libPods-TextShooter.a */,
+				577E1B4C4946768D8F0AFF62 /* libPods-TextShooterTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -228,7 +234,7 @@
 				046C2E9E185FB9400071B5B0 /* BIDGeometry.h */,
 				04CE475718B792F5008D4BA5 /* RBSGameCenterManager.h */,
 				04CE475818B792F5008D4BA5 /* RBSGameCenterManager.m */,
-				049637BE18E5846C00779C58 /* OtherRebisoftGames.json */,
+				049637BE18E5846C00779C58 /* OtherProductSpecs_TextShooter.json */,
 				04112E8518522D8F00202701 /* Images.xcassets */,
 				04112E6F18522D8F00202701 /* Supporting Files */,
 				04FB0EB81890318000FC08B1 /* SKNode+Extra.h */,
@@ -266,6 +272,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DFC2AD13A9B6B0C5F6D4B2E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41D22C1B6F6B70FF36FDA0E0 /* Pods-TextShooter.debug.xcconfig */,
+				4993762B346EA3093FABF3E8 /* Pods-TextShooter.release.xcconfig */,
+				B2944FDC61EFE91925B5A9E9 /* Pods-TextShooterTests.debug.xcconfig */,
+				1191DE6D8B6C8382E2942E72 /* Pods-TextShooterTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -273,11 +290,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04112E9C18522D8F00202701 /* Build configuration list for PBXNativeTarget "TextShooter" */;
 			buildPhases = (
-				6AA3CEA9C4E3450E8AB6D1E6 /* Check Pods Manifest.lock */,
+				DFA642378821711662CE4247 /* [CP] Check Pods Manifest.lock */,
 				04112E5F18522D8F00202701 /* Sources */,
 				04112E6018522D8F00202701 /* Frameworks */,
 				04112E6118522D8F00202701 /* Resources */,
-				7E49F15BEF7D44E0A6B4E175 /* Copy Pods Resources */,
+				7BCBED3D7221764A8C6B257E /* [CP] Embed Pods Frameworks */,
+				AF51C6B5D1E09014E2F30B2F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -292,9 +310,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04112E9F18522D8F00202701 /* Build configuration list for PBXNativeTarget "TextShooterTests" */;
 			buildPhases = (
+				DE23DC5F226D198D669E8F0D /* [CP] Check Pods Manifest.lock */,
 				04112E8718522D8F00202701 /* Sources */,
 				04112E8818522D8F00202701 /* Frameworks */,
 				04112E8918522D8F00202701 /* Resources */,
+				FEFAD7A89F8A50EA1ADAED20 /* [CP] Embed Pods Frameworks */,
+				055CC4DA4601654B2DEE009A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -313,13 +334,15 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = BID;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Apress;
 				TargetAttributes = {
 					04112E6218522D8F00202701 = {
 						DevelopmentTeam = 8N2KR7F4QA;
+						ProvisioningStyle = Automatic;
 					};
 					04112E8A18522D8F00202701 = {
+						ProvisioningStyle = Automatic;
 						TestTargetID = 04112E6218522D8F00202701;
 					};
 				};
@@ -354,7 +377,7 @@
 				04FB0EBD18911C4100FC08B1 /* MissileExplosion.sks in Resources */,
 				04FB0ECC1891305F00FC08B1 /* enemyHit.wav in Resources */,
 				04112E8618522D8F00202701 /* Images.xcassets in Resources */,
-				049637BF18E5846C00779C58 /* OtherRebisoftGames.json in Resources */,
+				049637BF18E5846C00779C58 /* OtherProductSpecs_TextShooter.json in Resources */,
 				046AB15518AB71BE006357EA /* levelComplete.wav in Resources */,
 				04FB0EC018911FC900FC08B1 /* EnemyExplosion.sks in Resources */,
 				04FB0ECD1891305F00FC08B1 /* gameOver.wav in Resources */,
@@ -375,34 +398,94 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6AA3CEA9C4E3450E8AB6D1E6 /* Check Pods Manifest.lock */ = {
+		055CC4DA4601654B2DEE009A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextShooterTests/Pods-TextShooterTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7E49F15BEF7D44E0A6B4E175 /* Copy Pods Resources */ = {
+		7BCBED3D7221764A8C6B257E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-TextShooter-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextShooter/Pods-TextShooter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF51C6B5D1E09014E2F30B2F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextShooter/Pods-TextShooter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE23DC5F226D198D669E8F0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DFA642378821711662CE4247 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FEFAD7A89F8A50EA1ADAED20 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextShooterTests/Pods-TextShooterTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -424,7 +507,6 @@
 				04112E7518522D8F00202701 /* main.m in Sources */,
 				043F26B818A159E10005B321 /* BIDHelpScene.m in Sources */,
 				0404D36618884659008F12E0 /* BIDEnemyNode.m in Sources */,
-				046AB15818AB7310006357EA /* BIDInfoScene.m in Sources */,
 				049637BA18E3323B00779C58 /* BIDLevelTwoScene.m in Sources */,
 				04CE475918B792F5008D4BA5 /* RBSGameCenterManager.m in Sources */,
 				049637B718E3322E00779C58 /* BIDLevelOneScene.m in Sources */,
@@ -499,13 +581,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jack Nutting (S8WC5WDKYN)";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -518,9 +606,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "7A7F5553-9088-4E65-B059-FB2A587B7F1C";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -538,21 +626,26 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rebisoft, Inc (8N2KR7F4QA)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PROVISIONING_PROFILE = "4313D7D7-8F45-42F2-BF29-BE28A8FDA250";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -560,15 +653,19 @@
 		};
 		04112E9D18522D8F00202701 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA5375F2A40D43978937E382 /* Pods-TextShooter.xcconfig */;
+			baseConfigurationReference = 41D22C1B6F6B70FF36FDA0E0 /* Pods-TextShooter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jack Nutting (S8WC5WDKYN)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8N2KR7F4QA;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextShooter/TextShooter-Prefix.pch";
 				INFOPLIST_FILE = "TextShooter/TextShooter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rebisoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -576,14 +673,19 @@
 		};
 		04112E9E18522D8F00202701 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA5375F2A40D43978937E382 /* Pods-TextShooter.xcconfig */;
+			baseConfigurationReference = 4993762B346EA3093FABF3E8 /* Pods-TextShooter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8N2KR7F4QA;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextShooter/TextShooter-Prefix.pch";
 				INFOPLIST_FILE = "TextShooter/TextShooter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rebisoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -591,8 +693,11 @@
 		};
 		04112EA018522D8F00202701 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2944FDC61EFE91925B5A9E9 /* Pods-TextShooterTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TextShooter.app/TextShooter";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -605,7 +710,9 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "TextShooterTests/TextShooterTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.apress.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -613,8 +720,11 @@
 		};
 		04112EA118522D8F00202701 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1191DE6D8B6C8382E2942E72 /* Pods-TextShooterTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TextShooter.app/TextShooter";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -623,7 +733,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextShooter/TextShooter-Prefix.pch";
 				INFOPLIST_FILE = "TextShooterTests/TextShooterTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.apress.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};

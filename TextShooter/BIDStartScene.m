@@ -25,7 +25,7 @@ static SKAction *gameStartSound;
 @property (strong, nonatomic) SKLabelNode *tutorialButton;
 @property (strong, nonatomic) SKLabelNode *helpButton;
 @property (strong, nonatomic) SKLabelNode *moreButton;
-@property (strong, nonatomic) SKLabelNode *infoButton;
+//@property (strong, nonatomic) SKLabelNode *infoButton;
 @property (strong, nonatomic) SKLabelNode *gameCenterButton;
 @property (strong, nonatomic) UIAlertView *waitingForAppStoreAlertView;
 
@@ -105,7 +105,8 @@ static SKAction *gameStartSound;
         _helpButton.position = CGPointMake(self.frame.size.width * 0.98,
                                             self.frame.size.height * 0.02);
         [self addChild:_helpButton];
-        
+
+        /*
         _infoButton = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
         _infoButton.text = @"Info!";
         _infoButton.fontColor = [SKColor blackColor];
@@ -115,14 +116,15 @@ static SKAction *gameStartSound;
         _infoButton.position = CGPointMake(self.frame.size.width * 0.02,
                                            self.frame.size.height * 0.02);
         [self addChild:_infoButton];
+         */
         
         _moreButton = [SKLabelNode labelNodeWithFontNamed:@"Courier"];
-        _moreButton.text = @"More games!";
+        _moreButton.text = @"More apps!";
         _moreButton.fontColor = [SKColor blackColor];
         _moreButton.fontSize = 16;
         _moreButton.verticalAlignmentMode = SKLabelVerticalAlignmentModeBaseline;
-        _moreButton.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
-        _moreButton.position = CGPointMake(self.frame.size.width * 0.5,
+        _moreButton.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
+        _moreButton.position = CGPointMake(self.frame.size.width * 0.02,
                                            self.frame.size.height * 0.02);
         [self addChild:_moreButton];
         
@@ -162,12 +164,12 @@ static SKAction *gameStartSound;
         [self animateButton:_helpButton then:^{
             [self.view presentScene:game transition:transition];
         }];
-    } else if (touchIsInNode(touch, _infoButton)) {
-        SKTransition *transition = [SKTransition flipVerticalWithDuration:0.5];
-        SKScene *game = [[BIDInfoScene alloc] initWithSize:self.frame.size];
-        [self animateButton:_infoButton then:^{
-            [self.view presentScene:game transition:transition];
-        }];
+//    } else if (touchIsInNode(touch, _infoButton)) {
+//        SKTransition *transition = [SKTransition flipVerticalWithDuration:0.5];
+//        SKScene *game = [[BIDInfoScene alloc] initWithSize:self.frame.size];
+//        [self animateButton:_infoButton then:^{
+//            [self.view presentScene:game transition:transition];
+//        }];
     } else if (!_gameCenterButton.hidden && touchIsInNode(touch, _gameCenterButton)) {
         [self animateButton:_gameCenterButton then:^{
             [[RBSGameCenterManager shared] showGameCenterWithInitialViewState:GKGameCenterViewControllerStateLeaderboards
@@ -178,7 +180,7 @@ static SKAction *gameStartSound;
 }
 
 - (void)showMultiProductStore {
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"OtherRebisoftGames" withExtension:@"json"];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"OtherProductSpecs_TextShooter" withExtension:@"json"];
     NSError *error;
     NSData *jsonData = [NSData dataWithContentsOfURL:url];
     if (jsonData) {
