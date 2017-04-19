@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class ProductSpecFetcher;
+@protocol ProductSpecFetcherDelegate;
+
 @interface BIDAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) ProductSpecFetcher *productSpecFetcher;
 
 @end

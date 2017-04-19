@@ -10,6 +10,8 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <AVFoundation/AVFoundation.h>
 
+#import "TextShooter-Swift.h"
+
 @implementation BIDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -25,6 +27,8 @@
     if (![audioSession setCategory:AVAudioSessionCategoryAmbient error:&audioError]) {
         NSLog(@"Error setting audio session category! %@", audioError);
     }
+
+    self.productSpecFetcher = [[ProductSpecFetcher alloc] initWith:nil filename:@"OtherProductSpecs_TextShooter" remoteURL:[NSURL URLWithString:@"http://rebisoft.com/product_specs/OtherProductSpecs_TextShooter.json"]];
     
     return YES;
 }

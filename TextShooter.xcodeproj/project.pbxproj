@@ -25,6 +25,7 @@
 		04112E8F18522D8F00202701 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04112E6A18522D8F00202701 /* UIKit.framework */; };
 		04112E9718522D8F00202701 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04112E9518522D8F00202701 /* InfoPlist.strings */; };
 		04112E9918522D8F00202701 /* TextShooterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04112E9818522D8F00202701 /* TextShooterTests.m */; };
+		04113B011EA81461002C3434 /* ProductSpecFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04113B001EA81461002C3434 /* ProductSpecFetcher.swift */; };
 		043F261F1897B1C50005B321 /* shoot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 043F26211897B1C50005B321 /* shoot.wav */; };
 		043F26B818A159E10005B321 /* BIDHelpScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 043F26B718A159E10005B321 /* BIDHelpScene.m */; };
 		04638BAE18591FA6004CFD7C /* BIDPlayerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 04638BAD18591FA6004CFD7C /* BIDPlayerNode.m */; };
@@ -87,6 +88,8 @@
 		04112E9418522D8F00202701 /* TextShooterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TextShooterTests-Info.plist"; sourceTree = "<group>"; };
 		04112E9618522D8F00202701 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		04112E9818522D8F00202701 /* TextShooterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextShooterTests.m; sourceTree = "<group>"; };
+		04113AFF1EA81460002C3434 /* TextShooter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TextShooter-Bridging-Header.h"; sourceTree = "<group>"; };
+		04113B001EA81461002C3434 /* ProductSpecFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSpecFetcher.swift; sourceTree = "<group>"; };
 		043F26201897B1C50005B321 /* Base */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Base; path = Base.lproj/shoot.wav; sourceTree = "<group>"; };
 		043F26B618A159E10005B321 /* BIDHelpScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDHelpScene.h; sourceTree = "<group>"; };
 		043F26B718A159E10005B321 /* BIDHelpScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDHelpScene.m; sourceTree = "<group>"; };
@@ -239,6 +242,8 @@
 				04112E6F18522D8F00202701 /* Supporting Files */,
 				04FB0EB81890318000FC08B1 /* SKNode+Extra.h */,
 				04FB0EB91890318000FC08B1 /* SKNode+Extra.m */,
+				04113B001EA81461002C3434 /* ProductSpecFetcher.swift */,
+				04113AFF1EA81460002C3434 /* TextShooter-Bridging-Header.h */,
 			);
 			path = TextShooter;
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 				TargetAttributes = {
 					04112E6218522D8F00202701 = {
 						DevelopmentTeam = 8N2KR7F4QA;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					04112E8A18522D8F00202701 = {
@@ -503,6 +509,7 @@
 				04112E7F18522D8F00202701 /* BIDViewController.m in Sources */,
 				0404D36A188995F6008F12E0 /* BIDBulletNode.m in Sources */,
 				04112E8218522D8F00202701 /* BIDLevelScene.m in Sources */,
+				04113B011EA81461002C3434 /* ProductSpecFetcher.swift in Sources */,
 				049637BD18E3324700779C58 /* BIDLevelThreeScene.m in Sources */,
 				04112E7518522D8F00202701 /* main.m in Sources */,
 				043F26B818A159E10005B321 /* BIDHelpScene.m in Sources */,
@@ -657,16 +664,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8N2KR7F4QA;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextShooter/TextShooter-Prefix.pch";
 				INFOPLIST_FILE = "TextShooter/TextShooter-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rebisoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TextShooter/TextShooter-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -677,16 +689,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8N2KR7F4QA;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextShooter/TextShooter-Prefix.pch";
 				INFOPLIST_FILE = "TextShooter/TextShooter-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rebisoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TextShooter/TextShooter-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -695,6 +711,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B2944FDC61EFE91925B5A9E9 /* Pods-TextShooterTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TextShooter.app/TextShooter";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
@@ -722,6 +739,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1191DE6D8B6C8382E2942E72 /* Pods-TextShooterTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TextShooter.app/TextShooter";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";

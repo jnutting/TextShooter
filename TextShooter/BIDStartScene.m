@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Apress. All rights reserved.
 //
 
+#import "BIDAppDelegate.h"
 #import "BIDStartScene.h"
 #import "BIDLevelScene.h"
 #import "BIDHelpScene.h"
@@ -16,6 +17,8 @@
 #import "SKNode+Extra.h"
 #import <MultiProductViewer/TBTMultiProductViewController.h>
 #import <MultiProductViewer/TBTProductCluster.h>
+
+#import "TextShooter-Swift.h"
 
 static SKAction *gameStartSound;
 
@@ -180,19 +183,12 @@ static SKAction *gameStartSound;
 }
 
 - (void)showMultiProductStore {
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"OtherProductSpecs_TextShooter" withExtension:@"json"];
-    NSError *error;
-    NSData *jsonData = [NSData dataWithContentsOfURL:url];
-    if (jsonData) {
-        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
-        if (dict) {
-            NSArray *specs = dict[@"productSpecs"];
-            NSArray *productClusters = [TBTProductCluster productClustersFromSpecs:specs];
-            [TBTMultiProductViewController runWithTitle:@"Other Games"
-                                        productClusters:productClusters
-                                               delegate:nil];
-        }
-    }
+    BIDAppDelegate *appDelegate = (BIDAppDelegate *)[[UIApplication sharedApplication] delegate];
+    ProductSpecFetcher *fetcher = appDelegate.productSpecFetcher;
+    NSArray *productClusters = [fetcher productClusters];
+    [TBTMultiProductViewController runWithTitle:@"Other Rebisoft Apps"
+                                productClusters:productClusters
+                                       delegate:nil];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
