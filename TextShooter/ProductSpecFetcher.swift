@@ -17,8 +17,8 @@ class ProductSpecFetcher: NSObject {
     weak var delegate: ProductSpecFetcherDelegate?
     let filename: String
     let remoteURL: URL
-
-    init(with delegate: ProductSpecFetcherDelegate?, filename: String, remoteURL: URL) {
+    
+    @objc init(delegate: ProductSpecFetcherDelegate?, filename: String, remoteURL: URL) {
         self.filename = filename
         self.remoteURL = remoteURL
         super.init()
@@ -34,7 +34,7 @@ class ProductSpecFetcher: NSObject {
         return documentUrl
     }
 
-    func productClusters() -> [TBTProductCluster]? {
+    @objc func productClusters() -> [TBTProductCluster]? {
         guard let urls = productSpecUrls() else { return nil }
         return productClustersFromFirstValidOfUrls(urls)
     }

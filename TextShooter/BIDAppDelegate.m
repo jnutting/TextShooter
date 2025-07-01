@@ -28,7 +28,7 @@
         NSLog(@"Error setting audio session category! %@", audioError);
     }
 
-    self.productSpecFetcher = [[ProductSpecFetcher alloc] initWith:nil filename:@"OtherProductSpecs_TextShooter" remoteURL:[NSURL URLWithString:@"http://rebisoft.com/product_specs/OtherProductSpecs_TextShooter.json"]];
+    self.productSpecFetcher = [[ProductSpecFetcher alloc] initWithDelegate:nil filename:@"OtherProductSpecs_TextShooter" remoteURL:[NSURL URLWithString:@"http://rebisoft.com/product_specs/OtherProductSpecs_TextShooter.json"]];
     
     return YES;
 }

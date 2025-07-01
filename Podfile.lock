@@ -1,5 +1,5 @@
 PODS:
-  - MultiProductViewer (0.0.3)
+  - MultiProductViewer (0.0.8)
 
 DEPENDENCIES:
   - MultiProductViewer (from `https://github.com/jnutting/MultiProductViewer`)
@@ -10,12 +10,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   MultiProductViewer:
-    :commit: 8fd1b1ba40a660e027a932a2a9341438b06caa3f
+    :commit: 7e7184e4c84635fa65e477d25562eee2940d7853
     :git: https://github.com/jnutting/MultiProductViewer
 
 SPEC CHECKSUMS:
-  MultiProductViewer: 272dc704965fee028c04985d8f39972c223fea79
+  MultiProductViewer: aa2e496de2a4ea66ff6a55ad36038810e0bac5f2
 
 PODFILE CHECKSUM: a83fcf17f0d8574fc6e2c31eec0e7a34cf927842
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.16.2
