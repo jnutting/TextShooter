@@ -1,0 +1,40 @@
+{ "productGroups" : [
+{   "title" : "Awesome Games",
+    "products" : [
+        {
+            "name" : "FlippyBit",
+            "details" : "Party like it's 1979! Flippy Bit makes one of 2014's biggest mobile hits look like it's on an old Atari.",
+            "identifier" : "825459863",
+            "imageURL" : "https://rebisoft.com/appicons/flippybit512.png"
+        },
+        {
+            "name" : "Pits of Death",
+            "details" : "Find your way through a mysterious dungeon. Find the arrow and defeat the dragon before you fall into a pit!",
+            "identifier" : "989109750",
+            "imageURL" : "https://rebisoft.com/appicons/PitsOfDeathIcon128.png"
+        },
+        {
+            "name" : "Scribattle",
+            "details" : "Put your finger-flicking abilities to the test in this all-but-forgotten 2009 App Store hit game!",
+            "identifier" : "301618970",
+            "imageURL" : "https://rebisoft.com/appicons/scribattle100.png"
+        },
+        {
+            "name" : "TextShooter",
+            "details" : "A deceptively simple shooter that will put your tapping to the test. When these X's start falling, you'll need every finger you've got just to stay alive!",
+            "identifier" : "814735204",
+            "imageURL" : "https://rebisoft.com/appicons/TextShooter1024.png"
+        },
+    ]
+},
+{   "title" : "Other Apps",
+    "products" : [
+        {
+            "name" : "Goldy",
+            "details" : "Goldy is a web browser for iPhone, iPad, and iPod touch that offers one simple feature: Privacy.",
+            "identifier" : "417317449",
+            "imageURL" : "https://rebisoft.com/_Media/screen_shot_2011-08-19_at_med.png"
+        },
+    ]
+},
+]}

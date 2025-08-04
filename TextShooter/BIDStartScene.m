@@ -15,10 +15,9 @@
 #import <StoreKit/StoreKit.h>
 #import "RBSGameCenterManager.h"
 #import "SKNode+Extra.h"
-#import <MultiProductViewer/TBTMultiProductViewController.h>
-#import <MultiProductViewer/TBTProductCluster.h>
 
 #import "TextShooter-Swift.h"
+
 
 static SKAction *gameStartSound;
 
@@ -183,12 +182,13 @@ static SKAction *gameStartSound;
 }
 
 - (void)showMultiProductStore {
-    BIDAppDelegate *appDelegate = (BIDAppDelegate *)[[UIApplication sharedApplication] delegate];
-    ProductSpecFetcher *fetcher = appDelegate.productSpecFetcher;
-    NSArray *productClusters = [fetcher productClusters];
-    [TBTMultiProductViewController runWithTitle:@"Other Rebisoft Apps"
-                                productClusters:productClusters
-                                       delegate:nil];
+//    BIDAppDelegate *appDelegate = (BIDAppDelegate *)[[UIApplication sharedApplication] delegate];
+//    ProductSpecFetcher *fetcher = appDelegate.productSpecFetcher;
+//    NSArray *productClusters = [fetcher productClusters];
+//    [TBTMultiProductViewController runWithTitle:@"Other Rebisoft Apps"
+//                                productClusters:productClusters
+//                                       delegate:nil];
+    [(BIDViewController *)self.view.window.rootViewController showOtherApps];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {

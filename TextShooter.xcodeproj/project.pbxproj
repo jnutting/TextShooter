@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,6 @@
 		04112E7518522D8F00202701 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04112E7418522D8F00202701 /* main.m */; };
 		04112E7918522D8F00202701 /* BIDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04112E7818522D8F00202701 /* BIDAppDelegate.m */; };
 		04112E7C18522D8F00202701 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04112E7A18522D8F00202701 /* Main.storyboard */; };
-		04112E7F18522D8F00202701 /* BIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04112E7E18522D8F00202701 /* BIDViewController.m */; };
 		04112E8218522D8F00202701 /* BIDLevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 04112E8118522D8F00202701 /* BIDLevelScene.m */; };
 		04112E8618522D8F00202701 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04112E8518522D8F00202701 /* Images.xcassets */; };
 		04112E8D18522D8F00202701 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04112E8C18522D8F00202701 /* XCTest.framework */; };
@@ -25,7 +24,6 @@
 		04112E8F18522D8F00202701 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04112E6A18522D8F00202701 /* UIKit.framework */; };
 		04112E9718522D8F00202701 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04112E9518522D8F00202701 /* InfoPlist.strings */; };
 		04112E9918522D8F00202701 /* TextShooterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04112E9818522D8F00202701 /* TextShooterTests.m */; };
-		04113B011EA81461002C3434 /* ProductSpecFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04113B001EA81461002C3434 /* ProductSpecFetcher.swift */; };
 		043F261F1897B1C50005B321 /* shoot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 043F26211897B1C50005B321 /* shoot.wav */; };
 		043F26B818A159E10005B321 /* BIDHelpScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 043F26B718A159E10005B321 /* BIDHelpScene.m */; };
 		04638BAE18591FA6004CFD7C /* BIDPlayerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 04638BAD18591FA6004CFD7C /* BIDPlayerNode.m */; };
@@ -36,6 +34,9 @@
 		049637BD18E3324700779C58 /* BIDLevelThreeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 049637BC18E3324700779C58 /* BIDLevelThreeScene.m */; };
 		049637BF18E5846C00779C58 /* OtherProductSpecs_TextShooter.json in Resources */ = {isa = PBXBuildFile; fileRef = 049637BE18E5846C00779C58 /* OtherProductSpecs_TextShooter.json */; };
 		04CE475918B792F5008D4BA5 /* RBSGameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CE475818B792F5008D4BA5 /* RBSGameCenterManager.m */; };
+		04E9311D2E4106B9004075B8 /* BIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E9311C2E4106B9004075B8 /* BIDViewController.swift */; };
+		04E9311F2E410C71004075B8 /* AppStoreCatalog in Frameworks */ = {isa = PBXBuildFile; productRef = 04E9311E2E410C71004075B8 /* AppStoreCatalog */; };
+		04E931212E413345004075B8 /* RebisoftAppCatalog.json in Resources */ = {isa = PBXBuildFile; fileRef = 04E931202E413345004075B8 /* RebisoftAppCatalog.json */; };
 		04FB0EBA1890318000FC08B1 /* SKNode+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB0EB91890318000FC08B1 /* SKNode+Extra.m */; };
 		04FB0EBD18911C4100FC08B1 /* MissileExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 04FB0EBB18911C4100FC08B1 /* MissileExplosion.sks */; };
 		04FB0EBE18911C4100FC08B1 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FB0EBC18911C4100FC08B1 /* spark.png */; };
@@ -47,7 +48,6 @@
 		04FB0ECE1891305F00FC08B1 /* gameStart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 04FB0EC91891305F00FC08B1 /* gameStart.wav */; };
 		04FB0ECF1891305F00FC08B1 /* playerHit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 04FB0ECA1891305F00FC08B1 /* playerHit.wav */; };
 		186BF2485ACE5CC82A88A6D0 /* libPods-TextShooterTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 577E1B4C4946768D8F0AFF62 /* libPods-TextShooterTests.a */; };
-		F6B5084E30EB09B9FA2869FB /* libPods-TextShooter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FA798194BB47C48A016A2C /* libPods-TextShooter.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,8 +78,6 @@
 		04112E7718522D8F00202701 /* BIDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDAppDelegate.h; sourceTree = "<group>"; };
 		04112E7818522D8F00202701 /* BIDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDAppDelegate.m; sourceTree = "<group>"; };
 		04112E7B18522D8F00202701 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		04112E7D18522D8F00202701 /* BIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDViewController.h; sourceTree = "<group>"; };
-		04112E7E18522D8F00202701 /* BIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDViewController.m; sourceTree = "<group>"; };
 		04112E8018522D8F00202701 /* BIDLevelScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BIDLevelScene.h; sourceTree = "<group>"; };
 		04112E8118522D8F00202701 /* BIDLevelScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BIDLevelScene.m; sourceTree = "<group>"; };
 		04112E8518522D8F00202701 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 		04112E9618522D8F00202701 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		04112E9818522D8F00202701 /* TextShooterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextShooterTests.m; sourceTree = "<group>"; };
 		04113AFF1EA81460002C3434 /* TextShooter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TextShooter-Bridging-Header.h"; sourceTree = "<group>"; };
-		04113B001EA81461002C3434 /* ProductSpecFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductSpecFetcher.swift; sourceTree = "<group>"; };
 		043F26201897B1C50005B321 /* Base */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Base; path = Base.lproj/shoot.wav; sourceTree = "<group>"; };
 		043F26B618A159E10005B321 /* BIDHelpScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BIDHelpScene.h; sourceTree = "<group>"; };
 		043F26B718A159E10005B321 /* BIDHelpScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BIDHelpScene.m; sourceTree = "<group>"; };
@@ -111,6 +108,8 @@
 		049BB3072E0EE0DC00FB59DD /* TextShooter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TextShooter.entitlements; sourceTree = "<group>"; };
 		04CE475718B792F5008D4BA5 /* RBSGameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBSGameCenterManager.h; sourceTree = "<group>"; };
 		04CE475818B792F5008D4BA5 /* RBSGameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBSGameCenterManager.m; sourceTree = "<group>"; };
+		04E9311C2E4106B9004075B8 /* BIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIDViewController.swift; sourceTree = "<group>"; };
+		04E931202E413345004075B8 /* RebisoftAppCatalog.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RebisoftAppCatalog.json; sourceTree = "<group>"; };
 		04FB0EB81890318000FC08B1 /* SKNode+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "SKNode+Extra.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		04FB0EB91890318000FC08B1 /* SKNode+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "SKNode+Extra.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		04FB0EBB18911C4100FC08B1 /* MissileExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MissileExplosion.sks; sourceTree = "<group>"; };
@@ -124,11 +123,7 @@
 		04FB0EC81891305F00FC08B1 /* gameOver.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameOver.wav; sourceTree = "<group>"; };
 		04FB0EC91891305F00FC08B1 /* gameStart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameStart.wav; sourceTree = "<group>"; };
 		04FB0ECA1891305F00FC08B1 /* playerHit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = playerHit.wav; sourceTree = "<group>"; };
-		1191DE6D8B6C8382E2942E72 /* Pods-TextShooterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextShooterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextShooterTests/Pods-TextShooterTests.release.xcconfig"; sourceTree = "<group>"; };
-		41D22C1B6F6B70FF36FDA0E0 /* Pods-TextShooter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextShooter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextShooter/Pods-TextShooter.debug.xcconfig"; sourceTree = "<group>"; };
-		4993762B346EA3093FABF3E8 /* Pods-TextShooter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextShooter.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextShooter/Pods-TextShooter.release.xcconfig"; sourceTree = "<group>"; };
 		577E1B4C4946768D8F0AFF62 /* libPods-TextShooterTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TextShooterTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2944FDC61EFE91925B5A9E9 /* Pods-TextShooterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextShooterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextShooterTests/Pods-TextShooterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4FA798194BB47C48A016A2C /* libPods-TextShooter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TextShooter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -140,8 +135,8 @@
 				04112E6918522D8F00202701 /* CoreGraphics.framework in Frameworks */,
 				04112E6B18522D8F00202701 /* UIKit.framework in Frameworks */,
 				04112E6D18522D8F00202701 /* SpriteKit.framework in Frameworks */,
+				04E9311F2E410C71004075B8 /* AppStoreCatalog in Frameworks */,
 				04112E6718522D8F00202701 /* Foundation.framework in Frameworks */,
-				F6B5084E30EB09B9FA2869FB /* libPods-TextShooter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,11 +160,11 @@
 				04FB0EBB18911C4100FC08B1 /* MissileExplosion.sks */,
 				04FB0EBF18911FC900FC08B1 /* EnemyExplosion.sks */,
 				04FB0EBC18911C4100FC08B1 /* spark.png */,
+				04E931202E413345004075B8 /* RebisoftAppCatalog.json */,
 				04112E6E18522D8F00202701 /* TextShooter */,
 				04112E9218522D8F00202701 /* TextShooterTests */,
 				04112E6518522D8F00202701 /* Frameworks */,
 				04112E6418522D8F00202701 /* Products */,
-				DFC2AD13A9B6B0C5F6D4B2E9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -209,8 +204,7 @@
 				04112E7718522D8F00202701 /* BIDAppDelegate.h */,
 				04112E7818522D8F00202701 /* BIDAppDelegate.m */,
 				04112E7A18522D8F00202701 /* Main.storyboard */,
-				04112E7D18522D8F00202701 /* BIDViewController.h */,
-				04112E7E18522D8F00202701 /* BIDViewController.m */,
+				04E9311C2E4106B9004075B8 /* BIDViewController.swift */,
 				049637B218E3315B00779C58 /* BIDLevelSceneFactory.h */,
 				049637B318E3315B00779C58 /* BIDLevelSceneFactory.m */,
 				04112E8018522D8F00202701 /* BIDLevelScene.h */,
@@ -244,7 +238,6 @@
 				04112E6F18522D8F00202701 /* Supporting Files */,
 				04FB0EB81890318000FC08B1 /* SKNode+Extra.h */,
 				04FB0EB91890318000FC08B1 /* SKNode+Extra.m */,
-				04113B001EA81461002C3434 /* ProductSpecFetcher.swift */,
 				04113AFF1EA81460002C3434 /* TextShooter-Bridging-Header.h */,
 			);
 			path = TextShooter;
@@ -279,17 +272,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DFC2AD13A9B6B0C5F6D4B2E9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				41D22C1B6F6B70FF36FDA0E0 /* Pods-TextShooter.debug.xcconfig */,
-				4993762B346EA3093FABF3E8 /* Pods-TextShooter.release.xcconfig */,
-				B2944FDC61EFE91925B5A9E9 /* Pods-TextShooterTests.debug.xcconfig */,
-				1191DE6D8B6C8382E2942E72 /* Pods-TextShooterTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -297,11 +279,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04112E9C18522D8F00202701 /* Build configuration list for PBXNativeTarget "TextShooter" */;
 			buildPhases = (
-				DFA642378821711662CE4247 /* [CP] Check Pods Manifest.lock */,
 				04112E5F18522D8F00202701 /* Sources */,
 				04112E6018522D8F00202701 /* Frameworks */,
 				04112E6118522D8F00202701 /* Resources */,
-				AF51C6B5D1E09014E2F30B2F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -362,6 +342,9 @@
 				Base,
 			);
 			mainGroup = 04112E5A18522D8F00202701;
+			packageReferences = (
+				04E9311B2E4105D9004075B8 /* XCRemoteSwiftPackageReference "AppStoreCatalog" */,
+			);
 			productRefGroup = 04112E6418522D8F00202701 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -388,6 +371,7 @@
 				04FB0EC018911FC900FC08B1 /* EnemyExplosion.sks in Resources */,
 				04FB0ECD1891305F00FC08B1 /* gameOver.wav in Resources */,
 				04FB0ECF1891305F00FC08B1 /* playerHit.wav in Resources */,
+				04E931212E413345004075B8 /* RebisoftAppCatalog.json in Resources */,
 				043F261F1897B1C50005B321 /* shoot.wav in Resources */,
 				04112E7C18522D8F00202701 /* Main.storyboard in Resources */,
 			);
@@ -404,24 +388,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AF51C6B5D1E09014E2F30B2F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TextShooter/Pods-TextShooter-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/MultiProductViewer/MultiProductViewer.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MultiProductViewer.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TextShooter/Pods-TextShooter-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DE23DC5F226D198D669E8F0D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -440,24 +406,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DFA642378821711662CE4247 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TextShooter-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -470,14 +418,13 @@
 				049637B418E3315B00779C58 /* BIDLevelSceneFactory.m in Sources */,
 				04112E7918522D8F00202701 /* BIDAppDelegate.m in Sources */,
 				04FB0EC61891294000FC08B1 /* BIDStartScene.m in Sources */,
-				04112E7F18522D8F00202701 /* BIDViewController.m in Sources */,
 				0404D36A188995F6008F12E0 /* BIDBulletNode.m in Sources */,
 				04112E8218522D8F00202701 /* BIDLevelScene.m in Sources */,
-				04113B011EA81461002C3434 /* ProductSpecFetcher.swift in Sources */,
 				049637BD18E3324700779C58 /* BIDLevelThreeScene.m in Sources */,
 				04112E7518522D8F00202701 /* main.m in Sources */,
 				043F26B818A159E10005B321 /* BIDHelpScene.m in Sources */,
 				0404D36618884659008F12E0 /* BIDEnemyNode.m in Sources */,
+				04E9311D2E4106B9004075B8 /* BIDViewController.swift in Sources */,
 				049637BA18E3323B00779C58 /* BIDLevelTwoScene.m in Sources */,
 				04CE475918B792F5008D4BA5 /* RBSGameCenterManager.m in Sources */,
 				049637B718E3322E00779C58 /* BIDLevelOneScene.m in Sources */,
@@ -624,7 +571,6 @@
 		};
 		04112E9D18522D8F00202701 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41D22C1B6F6B70FF36FDA0E0 /* Pods-TextShooter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -635,8 +581,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextShooter/TextShooter-Prefix.pch";
 				INFOPLIST_FILE = "TextShooter/TextShooter-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rebisoft.TextShooter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -650,7 +599,6 @@
 		};
 		04112E9E18522D8F00202701 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4993762B346EA3093FABF3E8 /* Pods-TextShooter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -661,8 +609,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextShooter/TextShooter-Prefix.pch";
 				INFOPLIST_FILE = "TextShooter/TextShooter-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rebisoft.TextShooter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -675,9 +626,7 @@
 		};
 		04112EA018522D8F00202701 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2944FDC61EFE91925B5A9E9 /* Pods-TextShooterTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TextShooter.app/TextShooter";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
@@ -703,9 +652,7 @@
 		};
 		04112EA118522D8F00202701 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1191DE6D8B6C8382E2942E72 /* Pods-TextShooterTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TextShooter.app/TextShooter";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
@@ -756,6 +703,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04E9311B2E4105D9004075B8 /* XCRemoteSwiftPackageReference "AppStoreCatalog" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jnutting/AppStoreCatalog";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04E9311E2E410C71004075B8 /* AppStoreCatalog */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04E9311B2E4105D9004075B8 /* XCRemoteSwiftPackageReference "AppStoreCatalog" */;
+			productName = AppStoreCatalog;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04112E5B18522D8F00202701 /* Project object */;
 }

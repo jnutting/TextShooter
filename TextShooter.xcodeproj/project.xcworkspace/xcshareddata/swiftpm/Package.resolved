@@ -1,0 +1,15 @@
+{
+  "originHash" : "cdd45fb8e393ddccc84c99ecc26d620d1a4cf1225205624ea7424ea187a808ae",
+  "pins" : [
+    {
+      "identity" : "appstorecatalog",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jnutting/AppStoreCatalog",
+      "state" : {
+        "branch" : "main",
+        "revision" : "86ff1d00d7128ddd523b52cba1cf5f43d060eafc"
+      }
+    }
+  ],
+  "version" : 3
+}
